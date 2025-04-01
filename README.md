@@ -96,3 +96,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Dev instructions:
+
+1. install node
+2. install nvm
+3. install yarn
+4. install npm i -g @nestjs/cli
+5. install docker desktop
+6. change database_url in .env to: "postgresql://postgres:123@localhost:5434/nest?schema=public"
+7. npx prisma migrate dev
