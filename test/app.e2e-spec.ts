@@ -107,7 +107,24 @@ describe('AppController (e2e)', () => {
           .expectStatus(200);
       });
     });
-    describe('Edit user', () => {});
+    describe('Edit user', () => {
+      const dto = {
+        firstName: 'Bob',
+        email: 'bob@gmail.com',
+      };
+      it('Should edit user', () => {
+        return pactum
+          .spec()
+          .patch('/users')
+          .withHeaders({
+            Authorization: `Bearer $S{userAt}`,
+          })
+          .withBody(dto)
+          .expectStatus(200)
+          .expectBodyContains(dto.email)
+          .expectBodyContains(dto.firstName);
+      });
+    });
   });
   describe('Bookmarks', () => {
     describe('Create Bookmark', () => {});
