@@ -106,3 +106,7 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 5. install docker desktop
 6. change database_url in .env to: "postgresql://postgres:123@localhost:5434/nest?schema=public"
 7. npx prisma migrate dev
+
+## Important notice
+right now the dotenv does not work with taking the .env.test, since I am working on windows, and the script is a unix script
+TODO: solve this on windows also, or using cross-env
